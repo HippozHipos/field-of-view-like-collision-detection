@@ -1,3 +1,5 @@
+//https://github.com/HippozHipos/field-of-view-like-collision-detection/tree/main
+
 #define OLC_PGE_APPLICATION
 #include "olcPixelGameEngine.h"
 
@@ -102,7 +104,7 @@ private:
 	{
 		for (int i = 0; i < nPoints; i++)
 		{
-			//3 random floats between 0 and 1 for initializing x, y and rotation angle and direction angle for point
+			//4 random floats between 0 and 1 for initializing x, y and rotation angle and direction angle for point
 			float rx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 			float ry = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 			float rra = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
