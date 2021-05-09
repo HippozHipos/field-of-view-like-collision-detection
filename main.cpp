@@ -80,7 +80,7 @@ private:
 
 private:
 
-    float pointsSpeed = 300.0f;
+    float pointsSpeed = 10.0f;
     int nPoints = 1000;
     std::vector<std::unique_ptr<Point>> points;
 
@@ -268,9 +268,9 @@ private:
             float tempAngle = DirectionAngle(rotationAngle1 + fov1);
             while (tempAngle > DirectionAngle(rotationAngle1 - fov1))
             {
-                for (int i = 0; i < 2; i++)
-                    Draw((int)(cosf(tempAngle) * sensoryRadius1 - i) + position1.x,
-                        (int)(sinf(tempAngle) * sensoryRadius1 - i) + position1.y, olc::RED);
+                for (int i = 0; i < 3; i++)
+                    Draw((int)(cosf(tempAngle) * (sensoryRadius1 + i)) + position1.x,
+                        (int)(sinf(tempAngle) * (sensoryRadius1 + i)) + position1.y, olc::RED);
                 tempAngle -= 0.01f;
             }
             //draw sensory radius
